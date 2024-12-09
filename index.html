@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About the Sea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #006064;
+            text-align: center;
+            padding: 50px;
+        }
+        #fact {
+            font-size: 1.5em;
+            margin: 20px;
+        }
+        button {
+            background-color: #00838f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #005662;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Facts About the Sea</h1>
+    <div id="fact">Click the button to learn a fun fact about the sea!</div>
+    <button onclick="showFact()">Show Fun Fact</button>
+
+    <script>
+        const facts = [
+            "The Mariana Trench is the deepest part of the world's oceans, reaching a depth of about 36,000 feet (nearly 11,000 meters).",
+            "The ocean is home to an estimated 700,000 to 1 million species, many of which are yet to be discovered.",
+            "The Great Barrier Reef, located off the coast of Australia, is the largest living structure on Earth.",
+            "Ocean currents play a crucial role in regulating the Earth's climate by distributing heat around the planet.",
+            "Sound travels about 4.3 times faster in water than in air, which is why marine animals rely heavily on sound for communication."
+        ];
+
+        function showFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
